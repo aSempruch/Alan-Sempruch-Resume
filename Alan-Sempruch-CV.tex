@@ -1,0 +1,203 @@
+% LaTeX Curriculum Vitae Template
+% 
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+% 
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{setspace}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Alan Sempruch}
+
+% Place clause 
+\def\clause{\IfFileExists{Clause.tex}{\input{Clause.tex}}{}}
+
+% \IfFileExists{Clause.tex}{\def\clause{\input{Clause.tex}}}{}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {cv, computer science, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.7in, 10.5in},
+  left=0.8in,
+  top=0.5in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+\pagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+      \setlength{\leftmargin}{1.5em}
+    }
+  }{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+% \centerline{\huge \bf \name}
+
+\vspace{0.20in}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Email: & \href{mailto:alan.sempruch.lk@gmail.com}{\tt alan.sempruch.lk@gmail.com} \\
+    Phone: & (+48) 724-231-428 \\
+    Github profile: & \href{https://github.com/aSempruch}{\tt
+      https://github.com/aSempruch} 
+  \end{tabular}
+\end{minipage}
+
+\section*{Education}
+
+\begin{itemize}
+\item B.S. Computer Science, Rutgers University - New Brunswick, NJ, US, 2015-2019 \\
+Graduated cum laude 1 semester early.
+\end{itemize}
+
+\section*{Experience}
+\begin{itemize}
+
+\item
+  \begin{flushleft}
+    Back-end Developer,\\*
+    Cloudity, Warsaw, Poland\\*
+    March 2019 -- June 2019
+
+    Worked on back-end business services powered by Force.com technologies.
+  \end{flushleft}
+
+\item
+  \begin{flushleft}
+    Software Engineering Intern,\\*
+    Susquehanna International Group, Philadelphia, Pennsylvania\\*
+    June 2018 -- August 2018
+
+    Worked on web application responsible for providing analytics 
+    about performance and resource utilization of deployed software.
+  \end{flushleft}
+
+\item
+  \begin{flushleft}
+    Software Engineering Intern,\\*
+    Columbia University Medical Department, Manhattan, New York\\*
+    June 2017 -- August 2017
+
+    Worked on RESTful back-end service responsible for tracking user watch time of web hosted videos.
+  \end{flushleft}
+\end{itemize}
+
+\section*{Projects}
+
+\begin{itemize}
+  \setlength{\parskip}{2pt}
+  \item Analyzing Reddit data with Hadoop MapReduce \\*
+  \href{https://github.com/aSempruch/RedditDataProject}{\tt
+  https://github.com/aSempruch/RedditDataProject}
+  \item Bulletin Board Service using gRPC and Google Protocol Buffers \\*
+  \href{https://github.com/aSempruch/DS-Project_1}{\tt
+  https://github.com/aSempruch/DS-Project\_1}
+
+  \item Photo Managing App for Android \\*
+  \href{https://bitbucket.org/aSempruch/androidphotos69/src/master/}{\tt
+  https://bitbucket.org/aSempruch/androidphotos69/src/master/}
+
+  \item Cypher breaker written in Scheme \\*
+  \href{https://github.com/aSempruch/PPL-Project_2}{\tt
+  https://github.com/aSempruch/PPL-Project\_2}
+
+  \item Chrome Extension (150+ weekly users) \\*
+  \href{https://chrome.google.com/webstore/detail/zedder/oclfiknhggkgkhibknacdlniepkggbal?hl=en}{\tt
+  (hyperlink)Available on Chrome Web Store} \\*
+  functions as enhancement suite for staff portal of the Rutgers Office of Information Technology
+
+\end{itemize}
+
+\section*{Technical Skills}
+
+\begin{itemize} 
+% Don't hyphenate
+\hyphenchar\font=-1
+\setlength{\parskip}{1pt}
+\item Programming languages (fluency in Java and C,
+  good knowledge of Python and JavaScript(+NodeJS))
+
+\item Development tools (Git, IntelliJ, Visual Studio Code, Eclipse, GDB, Vim)
+
+\item Linux programming (C language, sockets, pthreads)
+
+\item Database systems (proficiency in MySQL, basic proficiency in MongoDB)
+
+\item Data Analytics (proficiency in Hadoop MapReduce)
+
+% \item Mathematics (Calculus, Linear and Boolean Algebra, Discrete Mathematics)
+
+\end{itemize}
+
+\section*{Spoken Languages}
+  \begin{itemize}
+    \setlength{\parskip}{1pt}
+    \item English (Native) \qquad Polish (Native)
+  \end{itemize}
+
+\medskip
+% Footer
+\begin{center}
+  \linespread{0.1} \tiny  \clause
+  \begin{footnotesize}
+    
+    Last updated: \today \\
+    % \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
